@@ -3,6 +3,7 @@ cap = cv2.VideoCapture(0)    #调用默认摄像头
 cap.set(cv2.CAP_PROP_FPS, 30)#设置帧率为30
 #cap.set(3,640)    #设置尺寸  宽度
 #cap.set(4,480)    #高度
+cap.set (10,100)#亮度   11对比度
 while True :
     success,img=cap.read()
     cv2.imshow("video",img)
