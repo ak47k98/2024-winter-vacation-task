@@ -15,7 +15,7 @@ new_height = int((new_width / width) * height)
 resized_img = cv2.resize(img, (new_width, new_height))
 
 # 创建一个新的窗口
-cv2.namedWindow("Resized Image", cv2.WINDOW_NORMAL)0
+cv2.namedWindow("Resized Image", cv2.WINDOW_NORMAL)
 
 # 在显示器的四个角显示图像
 cv2.imshow("Resized Image", resized_img)
