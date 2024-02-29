@@ -7,7 +7,7 @@ def Gammaadjust(image,gamma_point):
     return temporaryimage
 
 
-image = cv2.imread("6-1.jpg")
+image = cv2.imread("6-2.jpg")
 gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 
 
