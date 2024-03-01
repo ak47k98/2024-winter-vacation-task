@@ -16,6 +16,7 @@ HSV模型： 而HSV模型，是针对用户观感的一种颜色模型，侧重�
 
 原文链接：https://blog.csdn.net/m0_48300767/article/details/125849400
 """
+"""
 import cv2
 import numpy as np
 
@@ -63,3 +64,124 @@ while (1):
     if k == 27:  # esc exit
         break
 # cv2.waitKey(0)
+"""
+
+
+"""
+rgb 221,0,27 可以转换成 hsv 的格式，具体的方法如下：
+ 
+首先，我们需要将 rgb 值转换成浮点数，方法是将每个值除以 255。因此，rgb(221,0,27) 可以转换成 (0.8666666666666667, 0.0, 0.10588235294117647)。
+ 
+然后，我们可以使用以下公式来计算 hsv 值：
+ 
+h = 色相，s = 饱和度，v = 明度
+ 
+maxc = max(r, g, b)
+minc = min(r, g, b)
+ 
+if maxc == minc:
+h = 0
+elif maxc == r:
+h = 60 * ((g - b) / (maxc - minc))
+elif maxc == g:
+h = 60 * (2 + (b - r) / (maxc - minc))
+else:
+h = 60 * (4 + (r - g) / (maxc - minc))
+ 
+if h < 0:
+h += 360
+ 
+s = 0 if maxc == 0 else (1 - minc / maxc)
+v = maxc
+ 
+所以，rgb(221,0,27) 可以转换成 hsv(348.57142857142856, 1.0, 0.8666666666666667)。
+ 
+注意：在计算 hsv 值时，色相 h 的单位是角度，饱和度 s 和明度 v 的单位都是百分比，它们的取值范围分别是 0 到 360、0 到 1 和 0 到 1。
+
+tool : https://www.jyshare.com/front-end/868/
+
+
+import cv2
+from PIL import Image
+import matplotlib.pyplot as plt
+import numpy as np
+ 
+# 按间距中的绿色按钮以运行脚本。
+if __name__ == '__main__':
+    image = cv2.imread('D:/Jupyter_Notebooks/3.png')
+ 
+    # 从RGB色彩空间转换到HSV色彩空间
+    hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
+ 
+    # 颜色范围下限
+    lower_threshold = np.array([110, 254, 220])
+    # 颜色范围上限
+    upper_threshold = np.array([180, 255, 255])
+ 
+    # 使用inRange函数检测颜色
+    mask = cv2.inRange(hsv, lower_threshold, upper_threshold)
+ 
+    # 对原图像和掩码进行位运算
+    result = cv2.bitwise_and(image, image, mask=mask)
+ 
+    # H、S、V范围二：
+    cv2.imshow("result", mask)
+    cv2.imshow("image", image)
+ 
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+    
+    
+    
+    
+    
+    # 颜色范围下限red
+    lower_threshold = np.array([0, 255, 255])
+    # 颜色范围上限
+    upper_threshold = np.array([180, 255, 255])
+    #V亮度调整
+    # 颜色范围下限
+    lower_threshold = np.array([0, 255, 200])
+    # 颜色范围上限
+    upper_threshold = np.array([180, 255, 255])
+    
+    # 颜色范围下限
+    lower_threshold = np.array([0, 254, 200])
+    # 颜色范围上限
+    upper_threshold = np.array([180, 255, 255])
+    
+        # 颜色范围下限
+    lower_threshold = np.array([120, 254, 200])
+    # 颜色范围上限
+    upper_threshold = np.array([180, 255, 255])
+    
+    
+    
+    
+        # 颜色范围下限    210     blue
+    lower_threshold = np.array([10, 210, 255])
+    # 颜色范围上限
+    upper_threshold = np.array([20, 215, 255])
+"""
+
+import cv2
+
+image = cv2.imread('配图2.jpg')
+cv2.imshow('image', image)
+dst = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+cv2.imshow('image_hsv', dst)
+b, g, r = cv2.split(dst)
+cv2.imshow('image_b', b)
+cv2.imshow('image_g', g)
+cv2.imshow('image_r', r)
+
+cv2.waitKey()
+
+"""
+inRange()函数
+
+      OpenCV中的inRange()函数可实现二值化功能（这点类似threshold()函数），更关键的是可以同时针对多通道进行操作，使用起来非常方便！主要是将在两个阈值内的像素值设置为白色（255），而不在阈值区间内的像素值设置为黑色（0），该功能类似于之间所讲的双阈值化操作。
+      官方文档中的解释：Checks if array elements lie between the elements of two other arrays.即检查数组元素是否在另外两个数组元素值之间。这里的数组通常也就是矩阵Mat或向量。请注意：该函数输出的dst是一幅二值化之后的图像
+
+
+"""
