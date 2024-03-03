@@ -18,5 +18,3 @@ cv2.waitKey()
 cv2.imshow("crop",crop)
 cv2.waitKey()
 
-
-

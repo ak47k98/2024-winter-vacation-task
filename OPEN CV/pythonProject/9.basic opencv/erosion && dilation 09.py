@@ -27,6 +27,7 @@ erosion = cv2.erode(binary,kernel,10)
 
 dilation = cv2.dilate(binary,kernel,10)
 
+
 """
 
 
