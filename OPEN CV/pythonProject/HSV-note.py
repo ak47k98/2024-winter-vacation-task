@@ -16,7 +16,7 @@ HSV模型： 而HSV模型，是针对用户观感的一种颜色模型，侧重�
 
 原文链接：https://blog.csdn.net/m0_48300767/article/details/125849400
 """
-"""
+
 import cv2
 import numpy as np
 
@@ -64,7 +64,7 @@ while (1):
     if k == 27:  # esc exit
         break
 # cv2.waitKey(0)
-"""
+
 
 
 """
@@ -99,71 +99,69 @@ v = maxc
 注意：在计算 hsv 值时，色相 h 的单位是角度，饱和度 s 和明度 v 的单位都是百分比，它们的取值范围分别是 0 到 360、0 到 1 和 0 到 1。
 
 tool : https://www.jyshare.com/front-end/868/
-
-
+"""
+"""
 import cv2
 from PIL import Image
 import matplotlib.pyplot as plt
 import numpy as np
- 
-# 按间距中的绿色按钮以运行脚本。
-if __name__ == '__main__':
-    image = cv2.imread('D:/Jupyter_Notebooks/3.png')
+
+image = cv2.imread('配图2.jpg')
  
     # 从RGB色彩空间转换到HSV色彩空间
-    hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
+hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
  
     # 颜色范围下限
-    lower_threshold = np.array([110, 254, 220])
+lower_threshold = np.array([110, 254, 220])
     # 颜色范围上限
-    upper_threshold = np.array([180, 255, 255])
+upper_threshold = np.array([180, 255, 255])
  
     # 使用inRange函数检测颜色
-    mask = cv2.inRange(hsv, lower_threshold, upper_threshold)
+mask = cv2.inRange(hsv, lower_threshold, upper_threshold)
  
     # 对原图像和掩码进行位运算
-    result = cv2.bitwise_and(image, image, mask=mask)
+result = cv2.bitwise_and(image, image, mask=mask)
  
     # H、S、V范围二：
-    cv2.imshow("result", mask)
-    cv2.imshow("image", image)
+cv2.imshow("result", mask)
+cv2.imshow("image", image)
  
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+cv2.waitKey()
+cv2.destroyAllWindows()
     
     
     
     
     
     # 颜色范围下限red
-    lower_threshold = np.array([0, 255, 255])
+lower_threshold = np.array([0, 255, 255])
     # 颜色范围上限
-    upper_threshold = np.array([180, 255, 255])
+upper_threshold = np.array([180, 255, 255])
     #V亮度调整
     # 颜色范围下限
-    lower_threshold = np.array([0, 255, 200])
+lower_threshold = np.array([0, 255, 200])
     # 颜色范围上限
-    upper_threshold = np.array([180, 255, 255])
+upper_threshold = np.array([180, 255, 255])
     
     # 颜色范围下限
-    lower_threshold = np.array([0, 254, 200])
+lower_threshold = np.array([0, 254, 200])
     # 颜色范围上限
-    upper_threshold = np.array([180, 255, 255])
+upper_threshold = np.array([180, 255, 255])
     
         # 颜色范围下限
-    lower_threshold = np.array([120, 254, 200])
+lower_threshold = np.array([120, 254, 200])
     # 颜色范围上限
-    upper_threshold = np.array([180, 255, 255])
+upper_threshold = np.array([180, 255, 255])
     
     
     
     
         # 颜色范围下限    210     blue
-    lower_threshold = np.array([10, 210, 255])
+lower_threshold = np.array([10, 210, 255])
     # 颜色范围上限
-    upper_threshold = np.array([20, 215, 255])
+upper_threshold = np.array([20, 215, 255])
 """
-
+"""
 import cv2
 
 image = cv2.imread('配图2.jpg')
@@ -175,8 +173,8 @@ cv2.imshow('image_b', b)
 cv2.imshow('image_g', g)
 cv2.imshow('image_r', r)
 
-cv2.waitKey()
-
+cv2.waitKey()"
+"""
 """
 inRange()函数
 

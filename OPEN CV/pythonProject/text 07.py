@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+
 image = cv2.imread("12.png")
 gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 crop = gray [30:215,60:240]#裁剪图片，先纵列再横行  从10到170  ，从40到200
@@ -15,6 +16,9 @@ for p in zip(*crop[::-1]):
 cv2.imshow("image",image)
 cv2.waitKey()
 """
+
+
+
 cv2.imshow("crop",crop)
 cv2.waitKey()
 
