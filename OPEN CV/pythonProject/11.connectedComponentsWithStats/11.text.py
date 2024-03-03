@@ -41,8 +41,6 @@ ret, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
 
 
 
-
-
 cv2.imshow("image",gray)
 cv2.imshow("edges",edges)
 cv2.waitKey()
