@@ -84,7 +84,7 @@ cv2.destroyAllWindows()
 # 定义颜色映射
 colors = [(255, 255, 255)] # 背景颜色
 for i in range(1, num_labels):
-    colors.append((int(centroids[i][0]) % 256, int(centroids[i][1]) % 256, i % 256))
+    colors.append((int(centroids[i][0]+20) % 256, int(centroids[i][1]+50) % 256, i % 256))
 
 # 创建输出图像用于标记连通域，并筛选出大小合适的连通域
 output = np.zeros((gray.shape[0], gray.shape[1], 3), np.uint8)

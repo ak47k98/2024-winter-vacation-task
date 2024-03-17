@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 gray = cv2.imread("11.png",cv2.COLOR_BGR2GRAY)
+gray = cv2.cvtColor(gray, cv2.COLOR_BGR2GRAY)
 
 """
 # 使用Canny函数进行边缘检测
@@ -8,9 +9,41 @@ edges = cv2.Canny(gray, 100, 200)
 """
 
 gray1 = cv2.medianBlur(gray, 5)
-gray2 = cv2.GaussianBlur(gray1,(7,7),0)
 
-ret, binary=cv2.threshold(gray2,90,255,cv2.THRESH_BINARY)
+ret, binary=cv2.threshold(gray1,90,255,cv2.THRESH_BINARY)
+
+
+binary=cv2.morphologyEx(binary, cv2.MORPH_OPEN,(9,9))
+binary = cv2.morphologyEx(binary, cv2.MORPH_CLOSE,(9,9))
+
+
+
+num_labels, labels, stats, centroids = cv2.connectedComponentsWithStats(binary, connectivity=8)
+
+number = 0
+output = np.zeros((gray.shape[0], gray.shape[1], 3), np.uint8)#新建用于输出的图表
+for i in range (1,num_labels):  #遍历每一个已找到的连通域
+    if stats[i, cv2.CC_STAT_AREA] >= 10:   #筛选过小的连通域
+        number+=1
+        mask = labels == i
+        output[:, :, 0][mask] = (np.random.randint(0, 205)+50)   #三通道随机赋值  BGR
+        output[:, :, 1][mask] = np.random.randint(0, 255)
+        output[:, :, 2][mask] = np.random.randint(0, 255)
+
+        cv2.rectangle(output,                                                                      #绘制矩形 --连通域边缘
+                      (stats[i, cv2.CC_STAT_LEFT], stats[i, cv2.CC_STAT_TOP]),                 #连通域的左侧坐标 ，连通域的顶部坐标
+                      (stats[i, cv2.CC_STAT_LEFT] + stats[i, cv2.CC_STAT_WIDTH],               #通过加上其宽  ， 高   来实现
+                       stats[i, cv2.CC_STAT_TOP] + stats[i, cv2.CC_STAT_HEIGHT]),
+                      (0, 255, 0), 2)
+        cv2.circle(output, (int(centroids[i][0]), int(centroids[i][1])), 4, (0, 0, 255), -1)
+
+print('num_labels = ',number)
+cv2.imshow('Binary', binary)
+cv2.imshow('Connected Components', output)
+cv2.waitKey()
+
+
+
 
 
 
