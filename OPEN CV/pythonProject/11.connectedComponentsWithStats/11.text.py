@@ -32,14 +32,14 @@ for i in range (1,num_labels):  #遍历每一个已找到的连通域
 
         cv2.rectangle(output,                                                                      #绘制矩形 --连通域边缘
                       (stats[i, cv2.CC_STAT_LEFT], stats[i, cv2.CC_STAT_TOP]),                 #连通域的左侧坐标 ，连通域的顶部坐标
-                      (stats[i, cv2.CC_STAT_LEFT] + stats[i, cv2.CC_STAT_WIDTH],               #通过加上其宽  ， 高   来实现
+                      (stats[i,cv2.CC_STAT_LEFT] + stats[i, cv2.CC_STAT_WIDTH],               #通过加上其宽  ， 高   来实现
                        stats[i, cv2.CC_STAT_TOP] + stats[i, cv2.CC_STAT_HEIGHT]),
                       (0, 255, 0), 2)
-        cv2.circle(output, (int(centroids[i][0]), int(centroids[i][1])), 4, (0, 0, 255), -1)
+        cv2.circle(output, (int(centroids[i][0]), int(centroids[i][1])), 4, (0, 0, 255), -1)         #centroids = cv2.connectedComponentsWithStats(binary)[3]   centroids[i][0]：指第i+1个连通域的质心的x坐标
 
 print('num_labels = ',number)
 cv2.imshow('Binary', binary)
-cv2.imshow('Connected Components', output)
+cv2.imshow('output', output)
 cv2.waitKey()
 
 
