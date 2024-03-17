@@ -2,9 +2,17 @@ import cv2
 import numpy as np
 gray = cv2.imread("11.png",cv2.COLOR_BGR2GRAY)
 
-
+"""
 # 使用Canny函数进行边缘检测
 edges = cv2.Canny(gray, 100, 200)
+"""
+
+gray1 = cv2.medianBlur(gray, 5)
+gray2 = cv2.GaussianBlur(gray1,(7,7),0)
+
+ret, binary=cv2.threshold(gray2,90,255,cv2.THRESH_BINARY)
+
+
 
 """
 连通域
@@ -31,16 +39,16 @@ image :待标记不同连通域的单通道图像，数据类型必须为CV_ _8U
 connectivity :标记连通域时使用的邻域种类，4表示4 -邻域，8表示8- 邻域。tpe :输出图像的数据类型，目前支持CV_ _32S和CV_ 16U两种数据类型。cltype :标记连通域时使用的算法类型标志，可以选择的参数下表中给出。
 
 """
-
+"""
 median = cv2.medianBlur(gray,5)  # 中值滤波，去噪
 
 # 阈值分割得到二值化图片
 ret, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
+"""
 
 
-
-
-
+"""
 cv2.imshow("image",gray)
 cv2.imshow("edges",edges)
 cv2.waitKey()
+"""
