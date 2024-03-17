@@ -7,6 +7,9 @@ cap.set (10,100)#亮度   11对比度
 while True :
     success,img=cap.read()
     median = cv2.medianBlur(img, 5)  # 中值滤波器
+
+
+
     cv2.imshow("video", img)
     cv2.imshow("video1", median)
     if cv2.waitKey(1) & 0xFF ==ord('q'):   #按q退出
