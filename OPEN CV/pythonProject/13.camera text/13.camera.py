@@ -1,7 +1,7 @@
 import cv2
 #cap = cv2.VideoCapture(0)
 
-video="http://admin:admin@192.168.22.148:4747/video"      #更改ip
+video="http://admin:admin@192.168.202.62:4747/video"      #更改ip
 
 cap =cv2.VideoCapture(video)
 
