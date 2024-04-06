@@ -1,0 +1,7 @@
+{
+  "package_name": "bboxes_ex_msgs",
+  "non_idl_tuples": [
+    "/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/bbox_ex_msgs:msg/BoundingBox.msg",
+    "/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/bbox_ex_msgs:msg/BoundingBoxes.msg"
+  ]
+}

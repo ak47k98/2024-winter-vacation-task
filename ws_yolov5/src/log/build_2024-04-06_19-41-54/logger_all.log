@@ -1,0 +1,96 @@
+[0.028s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.028s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='sequential', event_handlers=None, base_paths=['.'], paths=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=CustomArgumentParser(prog='colcon build', usage=None, description='Build a set of packages.', formatter_class=<class 'colcon_core.command.CustomFormatter'>, conflict_handler='error', add_help=True), verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f5ce5729840>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f5ce5729840>>)
+[0.094s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.094s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.094s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.094s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS) by extensions ['ignore', 'ignore_ament_install']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS) by extension 'ignore'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS) by extension 'ignore_ament_install'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS) by extensions ['ros']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS) by extension 'ros'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS) by extensions ['cmake', 'python']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS) by extension 'cmake'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS) by extension 'python'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS) by extensions ['python_setup_py']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS) by extension 'python_setup_py'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS/yolov5_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS/yolov5_ros) by extension 'ignore'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS/yolov5_ros) by extension 'ignore_ament_install'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS/yolov5_ros) by extensions ['ros']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(YOLOv5-ROS/yolov5_ros) by extension 'ros'
+[0.101s] DEBUG:colcon.colcon_core.package_identification:Package 'YOLOv5-ROS/yolov5_ros' with type 'ros.ament_python' and name 'yolov5_ros'
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(bbox_ex_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(bbox_ex_msgs) by extension 'ignore'
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(bbox_ex_msgs) by extension 'ignore_ament_install'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(bbox_ex_msgs) by extensions ['ros']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(bbox_ex_msgs) by extension 'ros'
+[0.102s] DEBUG:colcon.colcon_core.package_identification:Package 'bbox_ex_msgs' with type 'ros.ament_cmake' and name 'bboxes_ex_msgs'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.102s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.102s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.102s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'bboxes_ex_msgs' build argument 'cmake_args' from command line to 'None'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'bboxes_ex_msgs' build argument 'cmake_target' from command line to 'None'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'bboxes_ex_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'bboxes_ex_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'bboxes_ex_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'bboxes_ex_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'bboxes_ex_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'bboxes_ex_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'bboxes_ex_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.114s] DEBUG:colcon.colcon_core.verb:Building package 'bboxes_ex_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/build/bboxes_ex_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/bboxes_ex_msgs', 'merge_install': False, 'path': '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/bbox_ex_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'yolov5_ros' build argument 'cmake_args' from command line to 'None'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'yolov5_ros' build argument 'cmake_target' from command line to 'None'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'yolov5_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'yolov5_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'yolov5_ros' build argument 'cmake_clean_first' from command line to 'False'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'yolov5_ros' build argument 'cmake_force_configure' from command line to 'False'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'yolov5_ros' build argument 'ament_cmake_args' from command line to 'None'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'yolov5_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[0.114s] Level 5:colcon.colcon_core.verb:set package 'yolov5_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.114s] DEBUG:colcon.colcon_core.verb:Building package 'yolov5_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/build/yolov5_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/yolov5_ros', 'merge_install': False, 'path': '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/YOLOv5-ROS/yolov5_ros', 'symlink_install': False, 'test_result_base': None}
+[0.114s] INFO:colcon.colcon_core.executor:Executing jobs using 'sequential' executor
+[0.115s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'bboxes_ex_msgs'
+[0.115s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/bbox_ex_msgs' with build type 'ament_cmake'
+[0.115s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/bbox_ex_msgs'
+[0.115s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.115s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.119s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/build/bboxes_ex_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ak47k98/dev_ws/install/learning_urdf:/home/ak47k98/dev_ws/install/learning_topic:/home/ak47k98/dev_ws/install/learning_tf:/home/ak47k98/dev_ws/install/learning_service:/home/ak47k98/dev_ws/install/learning_qos:/home/ak47k98/dev_ws/install/learning_pkg_python:/home/ak47k98/dev_ws/install/learning_parameter:/home/ak47k98/dev_ws/install/learning_node:/home/ak47k98/dev_ws/install/learning_launch:/home/ak47k98/dev_ws/install/learning_action:/home/ak47k98/dev_ws/install/learning_gazebo_fortress:/home/ak47k98/dev_ws/install/learning_gazebo:/home/ak47k98/dev_ws/install/learning_cv:/opt/ros/humble CONDA_PROMPT_MODIFIER=(yolov5) /usr/bin/cmake /home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/bbox_ex_msgs -DCMAKE_INSTALL_PREFIX=/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/bboxes_ex_msgs
+[0.303s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/build/bboxes_ex_msgs' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ak47k98/dev_ws/install/learning_urdf:/home/ak47k98/dev_ws/install/learning_topic:/home/ak47k98/dev_ws/install/learning_tf:/home/ak47k98/dev_ws/install/learning_service:/home/ak47k98/dev_ws/install/learning_qos:/home/ak47k98/dev_ws/install/learning_pkg_python:/home/ak47k98/dev_ws/install/learning_parameter:/home/ak47k98/dev_ws/install/learning_node:/home/ak47k98/dev_ws/install/learning_launch:/home/ak47k98/dev_ws/install/learning_action:/home/ak47k98/dev_ws/install/learning_gazebo_fortress:/home/ak47k98/dev_ws/install/learning_gazebo:/home/ak47k98/dev_ws/install/learning_cv:/opt/ros/humble CONDA_PROMPT_MODIFIER=(yolov5) /usr/bin/cmake /home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/bbox_ex_msgs -DCMAKE_INSTALL_PREFIX=/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/bboxes_ex_msgs
+[0.308s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bboxes_ex_msgs)
+[0.309s] Level 1:colcon.colcon_core.environment:checking '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/bboxes_ex_msgs' for CMake module files
+[0.309s] Level 1:colcon.colcon_core.environment:checking '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/bboxes_ex_msgs' for CMake config files
+[0.310s] Level 1:colcon.colcon_core.environment:checking '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/bboxes_ex_msgs/bin'
+[0.310s] Level 1:colcon.colcon_core.environment:checking '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/bboxes_ex_msgs/lib/pkgconfig/bboxes_ex_msgs.pc'
+[0.310s] Level 1:colcon.colcon_core.environment:checking '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/bboxes_ex_msgs/lib/python3.10/site-packages'
+[0.310s] Level 1:colcon.colcon_core.environment:checking '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/bboxes_ex_msgs/bin'
+[0.310s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/bboxes_ex_msgs/share/bboxes_ex_msgs/package.dsv'
+[0.310s] INFO:colcon.colcon_core.shell:Creating package script '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/bboxes_ex_msgs/share/bboxes_ex_msgs/package.sh'
+[0.311s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/bboxes_ex_msgs/share/colcon-core/packages/bboxes_ex_msgs)
+[0.311s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'bboxes_ex_msgs' finished with '1'
+[0.311s] DEBUG:colcon.colcon_core.executor.sequential:closing loop
+[0.311s] DEBUG:colcon.colcon_core.executor.sequential:loop closed
+[0.311s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.311s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.312s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/local_setup.sh'
+[0.312s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/_local_setup_util_sh.py'
+[0.312s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/install/setup.sh'

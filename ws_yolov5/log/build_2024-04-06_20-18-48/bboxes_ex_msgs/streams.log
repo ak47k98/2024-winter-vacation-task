@@ -1,0 +1,49 @@
+[0.004s] Invoking command in '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/build/bboxes_ex_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/bbox_ex_msgs -DCMAKE_INSTALL_PREFIX=/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/install/bboxes_ex_msgs
+[0.011s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.078s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.080s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.093s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.094s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.098s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.103s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.110s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.117s] -- Found std_msgs: 4.2.3 (/opt/ros/humble/share/std_msgs/cmake)
+[0.132s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.192s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[0.192s]   execute_process(/home/ak47k98/anaconda3/envs/yolov5/bin/python3 -m
+[0.192s]   rosidl_adapter --package-name bboxes_ex_msgs --arguments-file
+[0.192s]   /home/ak47k98/class home for
+[0.192s]   team/2024-winter-vacation-task/ws_yolov5/build/bboxes_ex_msgs/rosidl_adapter__arguments__bboxes_ex_msgs.json
+[0.192s]   --output-dir /home/ak47k98/class home for
+[0.192s]   team/2024-winter-vacation-task/ws_yolov5/build/bboxes_ex_msgs/rosidl_adapter/bboxes_ex_msgs
+[0.192s]   --output-file /home/ak47k98/class home for
+[0.192s]   team/2024-winter-vacation-task/ws_yolov5/build/bboxes_ex_msgs/rosidl_adapter/bboxes_ex_msgs.idls)
+[0.192s]   returned error code 1:
+[0.192s] 
+[0.192s]   Traceback (most recent call last):
+[0.192s] 
+[0.192s]     File "/home/ak47k98/anaconda3/envs/yolov5/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[0.192s]       return _run_code(code, main_globals, None,
+[0.192s]     File "/home/ak47k98/anaconda3/envs/yolov5/lib/python3.8/runpy.py", line 87, in _run_code
+[0.193s]       exec(code, run_globals)
+[0.193s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.193s]       sys.exit(main())
+[0.193s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main
+[0.193s]       abs_idl_file = convert_to_idl(
+[0.193s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 18, in convert_to_idl
+[0.193s]       from rosidl_adapter.msg import convert_msg_to_idl
+[0.193s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/msg/__init__.py", line 16, in <module>
+[0.193s]       from rosidl_adapter.resource import expand_template
+[0.193s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/resource/__init__.py", line 19, in <module>
+[0.193s]       import em
+[0.193s] 
+[0.193s]   ModuleNotFoundError: No module named 'em'
+[0.193s] 
+[0.193s] Call Stack (most recent call first):
+[0.193s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.193s]   CMakeLists.txt:11 (rosidl_generate_interfaces)
+[0.193s] 
+[0.193s] [0m
+[0.193s] -- Configuring incomplete, errors occurred!
+[0.193s] See also "/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/build/bboxes_ex_msgs/CMakeFiles/CMakeOutput.log".
+[0.196s] Invoked command in '/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/build/bboxes_ex_msgs' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/src/bbox_ex_msgs -DCMAKE_INSTALL_PREFIX=/home/ak47k98/class home for team/2024-winter-vacation-task/ws_yolov5/install/bboxes_ex_msgs
